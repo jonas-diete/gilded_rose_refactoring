@@ -111,7 +111,19 @@ describe('Shop', () => {
     expect(updatedItems[0].quality).toBe(10);
   })
 
-  it('Aged Brie quality doesnt increase beyond 50', () => {
+  it('Aged Brie increases in quality even with negative sellIn', () => {
+    let fakeItem1 = {
+      name: 'Aged Brie',
+      sellIn: -3,
+      quality: 8
+    }
+    const shop = new Shop([fakeItem1]);
+    shop.updateQuality();
+    const updatedItems = shop.updateQuality();
+    expect(updatedItems[0].quality).toBe(10);
+  })
+
+  it('Quality doesnt increase beyond 50', () => {
     let fakeItem1 = {
       name: 'Aged Brie',
       sellIn: 12,
@@ -121,5 +133,33 @@ describe('Shop', () => {
     shop.updateQuality();
     const updatedItems = shop.updateQuality();
     expect(updatedItems[0].quality).toBe(50);
+  })
+
+  it('Sulfuras values dont change', () => {
+    let fakeItem1 = {
+      name: 'Sulfuras',
+      sellIn: 100,
+      quality: 32
+    }
+    const shop = new Shop([fakeItem1]);
+    shop.updateQuality();
+    shop.updateQuality();
+    const updatedItems = shop.updateQuality();
+    expect(updatedItems[0].quality).toBe(32);
+    expect(updatedItems[0].sellIn).toBe(100);
+  })
+
+  it('Backstage Passes increase in value if sellIn is not negative', () => {
+    let fakeItem1 = {
+      name: 'Backstage passes',
+      sellIn: 30,
+      quality: 10
+    }
+    const shop = new Shop([fakeItem1]);
+    shop.updateQuality();
+    shop.updateQuality();
+    const updatedItems = shop.updateQuality();
+    expect(updatedItems[0].quality).toBe(13);
+    expect(updatedItems[0].sellIn).toBe(27);
   })
 }) 

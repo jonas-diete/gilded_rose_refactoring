@@ -5,7 +5,7 @@ class Shop {
 
   updateQuality() {
     const maxQuality = 50;
-    const specialItems = ['Aged Brie'];
+    const specialItems = ['Aged Brie', 'Sulfuras', 'Backstage passes'];
 
     this.items.forEach((item) => {
       if (specialItems.includes(item.name)) {
@@ -24,6 +24,9 @@ class Shop {
 
   updateSpecialItemAttributes(item) {
     if (item.name === 'Aged Brie') {
+      item = this.changeQuality(item, 1);
+      item.sellIn--;
+    } else if (item.name === 'Backstage passes') {
       item = this.changeQuality(item, 1);
       item.sellIn--;
     }
