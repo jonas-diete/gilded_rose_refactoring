@@ -5,20 +5,32 @@ class Shop {
 
   updateQuality() {
     const maxQuality = 50;
+    const specialItems = ['Aged Brie'];
 
     this.items.forEach((item) => {
-      if (item.sellIn < 0) {
-        item = this.lowerQuality(item, -2);
+      if (specialItems.includes(item.name)) {
+        item = this.updateSpecialItemAttributes(item);
       } else {
-        item = this.lowerQuality(item);
+        if (item.sellIn < 0) {
+          item = this.changeQuality(item, -2);
+        } else {
+          item = this.changeQuality(item);
+        }
+        item.sellIn--;
       }
-      item.sellIn--;
     })
-
     return this.items;
   }
 
-  lowerQuality(item, rate = -1) {
+  updateSpecialItemAttributes(item) {
+    if (item.name === 'Aged Brie') {
+      item = this.changeQuality(item, 1);
+      item.sellIn--;
+    }
+    return item;
+  }
+
+  changeQuality(item, rate = -1) {
     item.quality += rate;
     if (item.quality < 0) {
       item.quality = 0;
