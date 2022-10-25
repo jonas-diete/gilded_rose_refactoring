@@ -35,6 +35,9 @@ class Shop {
     if (item.quality < 0) {
       item.quality = 0;
     }
+    if (item.quality > 50) {
+      item.quality = 50;
+    }
     return item;
   }
 }

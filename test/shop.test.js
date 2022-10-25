@@ -110,4 +110,16 @@ describe('Shop', () => {
     const updatedItems = shop.updateQuality();
     expect(updatedItems[0].quality).toBe(10);
   })
+
+  it('Aged Brie quality doesnt increase beyond 50', () => {
+    let fakeItem1 = {
+      name: 'Aged Brie',
+      sellIn: 12,
+      quality: 49
+    }
+    const shop = new Shop([fakeItem1]);
+    shop.updateQuality();
+    const updatedItems = shop.updateQuality();
+    expect(updatedItems[0].quality).toBe(50);
+  })
 }) 
