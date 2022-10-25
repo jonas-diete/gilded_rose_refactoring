@@ -74,7 +74,7 @@ describe('Shop', () => {
     expect(updatedItems[1].sellIn).toBe(24);
   })
 
-  it('lowers the quality by 2 when sellIn is negative', () => {
+  it('lowers the quality by 2 when sellIn is 0 or negative', () => {
     let fakeItem1 = {
       name: 'Leather Belt',
       sellIn: -1,
@@ -149,7 +149,7 @@ describe('Shop', () => {
     expect(updatedItems[0].sellIn).toBe(100);
   })
 
-  it('Backstage Passes increase in value if sellIn is not negative', () => {
+  it('Backstage Passes increase in quality if sellIn is not negative', () => {
     let fakeItem1 = {
       name: 'Backstage passes',
       sellIn: 30,
@@ -161,5 +161,41 @@ describe('Shop', () => {
     const updatedItems = shop.updateQuality();
     expect(updatedItems[0].quality).toBe(13);
     expect(updatedItems[0].sellIn).toBe(27);
+  })
+
+  it('Backstage Pass quality is 0 if sellIn is 0 or negative', () => {
+    let fakeItem1 = {
+      name: 'Backstage passes',
+      sellIn: 0,
+      quality: 10
+    }
+    const shop = new Shop([fakeItem1]);
+    const updatedItems = shop.updateQuality();
+    expect(updatedItems[0].quality).toBe(0);
+    expect(updatedItems[0].sellIn).toBe(-1);
+  })
+
+  it('Backstage Passes increase in quality by 3 if sellIn is 5 or lower but above 0', () => {
+    let fakeItem1 = {
+      name: 'Backstage passes',
+      sellIn: 4,
+      quality: 10
+    }
+    const shop = new Shop([fakeItem1]);
+    const updatedItems = shop.updateQuality();
+    expect(updatedItems[0].quality).toBe(13);
+    expect(updatedItems[0].sellIn).toBe(3);
+  })
+
+  it('Backstage Passes increase in quality by 2 if sellIn is 10 or lower but above 5', () => {
+    let fakeItem1 = {
+      name: 'Backstage passes',
+      sellIn: 8,
+      quality: 10
+    }
+    const shop = new Shop([fakeItem1]);
+    const updatedItems = shop.updateQuality();
+    expect(updatedItems[0].quality).toBe(12);
+    expect(updatedItems[0].sellIn).toBe(7);
   })
 }) 
