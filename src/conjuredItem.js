@@ -2,10 +2,7 @@ const StockItem = require('./stockItem');
 
 class ConjuredItem extends StockItem {
   constructor(name, sellIn, quality) {
-    super();
-    this.name = name;
-    this.sellIn = sellIn;
-    this.quality = quality;
+    super(name, sellIn, quality);
     this.qualityChangeRate = -2;
   }
 

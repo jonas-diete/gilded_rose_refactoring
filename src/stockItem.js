@@ -2,10 +2,7 @@ const Item = require('./item');
 
 class StockItem extends Item {
   constructor(name, sellIn, quality) {
-    super();
-    this.name = name;
-    this.sellIn = sellIn;
-    this.quality = quality;
+    super(name, sellIn, quality);
     this.qualityChangeRate = -1;
     this.sellInChangeRate = -1;
   }
