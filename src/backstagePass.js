@@ -13,9 +13,7 @@ class BackstagePass extends BetterWithAge {
       this.qualityChangeRate = +2;
     }
     super.updateValues();
-    if (this.sellIn <= 0) {
-      this.quality = 0
-    }
+    if (this.sellIn <= 0) {this.quality = 0}
   }
 }
 
