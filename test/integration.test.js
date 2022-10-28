@@ -3,6 +3,7 @@ const StockItem = require('../src/stockItem');
 const BetterWithAge = require('../src/betterWithAge');
 const Sulfuras = require('../src/sulfuras');
 const BackstagePass = require('../src/backstagePass');
+const ConjuredItem = require('../src/conjuredItem')
 
 describe('Shop', () => {
   it('lowers the quality for an item', () => {
@@ -142,5 +143,27 @@ describe('Shop', () => {
     const updatedItems = gildedRose.updateQuality();
     expect(updatedItems[0].quality).toBe(12);
     expect(updatedItems[0].sellIn).toBe(7);
+  })
+
+  it('Conjured items degrade in quality by 2 each day before sellIn', () => {
+    let item = new ConjuredItem('Conjured Sword', 10, 43);
+    const gildedRose = new Shop([item]);
+    const updatedItems = gildedRose.updateQuality();
+    expect(updatedItems[0].quality).toBe(41);
+  })
+
+  it('Conjured items degrade in quality by 4 each day if sellIn is 0 or negative', () => {
+    let item = new ConjuredItem('Conjured Sword', -3, 43);
+    const gildedRose = new Shop([item]);
+    const updatedItems = gildedRose.updateQuality();
+    expect(updatedItems[0].quality).toBe(39);
+  })
+
+  it('Conjured items cant have quality lower than 0', () => {
+    let item = new ConjuredItem('Conjured Sword', -3, 5);
+    const gildedRose = new Shop([item]);
+    gildedRose.updateQuality();
+    const updatedItems = gildedRose.updateQuality();
+    expect(updatedItems[0].quality).toBe(0);
   })
 }) 

@@ -1,8 +1,8 @@
-const Shop = require("../src/shop");
-const StockItem = require("../src/StockItem");
-const BetterWithAge = require("../src/betterWithAge");
-const Sulfuras = require("../src/sulfuras");
-const BackstagePass = require("../src/backstagePass");
+const Shop = require("./src/shop");
+const StockItem = require("./src/StockItem");
+const BetterWithAge = require("./src/betterWithAge");
+const Sulfuras = require("./src/sulfuras");
+const BackstagePass = require("./src/backstagePass");
 
 
 const items = [

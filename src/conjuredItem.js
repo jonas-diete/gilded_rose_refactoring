@@ -1,18 +1,19 @@
 const StockItem = require('./stockItem');
 
-class BetterWithAge extends StockItem {
+class ConjuredItem extends StockItem {
   constructor(name, sellIn, quality) {
     super();
     this.name = name;
     this.sellIn = sellIn;
     this.quality = quality;
-    this.qualityChangeRate = +1;
+    this.qualityChangeRate = -2;
   }
 
   updateValues() {
+    if (this.sellIn <= 0) {this.qualityChangeRate = -4;}
     super.setValues();
-    if (this.quality > 50) {this.quality = 50;}
+    if (this.quality < 0) {this.quality = 0;}
   }
 }
 
-module.exports = BetterWithAge;
+module.exports = ConjuredItem;

@@ -16,13 +16,9 @@ class StockItem extends Item {
   }
 
   updateValues() {
-    if (this.sellIn <= 0) {
-      this.qualityChangeRate = -2;
-    }
+    if (this.sellIn <= 0) {this.qualityChangeRate = -2;}
     this.setValues();
-    if (this.quality < 0) {
-      this.quality = 0;
-    }
+    if (this.quality < 0) {this.quality = 0;}
   }
 }
 
