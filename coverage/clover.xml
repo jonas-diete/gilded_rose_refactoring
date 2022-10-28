@@ -1,40 +1,86 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1666704963973" clover="3.2.0">
-  <project timestamp="1666704963973" name="All files">
-    <metrics statements="31" coveredstatements="15" conditionals="35" coveredconditionals="9" methods="3" coveredmethods="3" elements="69" coveredelements="27" complexity="0" loc="31" ncloc="31" packages="1" files="1" classes="1"/>
-    <file name="gilded_rose.js" path="/Users/jonas/Documents/Projects/week10/gilded_rose/src/gilded_rose.js">
-      <metrics statements="31" coveredstatements="15" conditionals="35" coveredconditionals="9" methods="3" coveredmethods="3"/>
+<coverage generated="1666951988430" clover="3.2.0">
+  <project timestamp="1666951988430" name="All files">
+    <metrics statements="59" coveredstatements="59" conditionals="24" coveredconditionals="24" methods="17" coveredmethods="17" elements="100" coveredelements="100" complexity="0" loc="59" ncloc="59" packages="1" files="7" classes="7"/>
+    <file name="backstagePass.js" path="/Users/jonas/Documents/Projects/week10/gilded_rose/src/backstagePass.js">
+      <metrics statements="10" coveredstatements="10" conditionals="6" coveredconditionals="6" methods="2" coveredmethods="2"/>
+      <line num="1" count="1" type="stmt"/>
+      <line num="5" count="4" type="stmt"/>
+      <line num="6" count="4" type="stmt"/>
+      <line num="10" count="6" type="cond" truecount="2" falsecount="0"/>
+      <line num="11" count="2" type="stmt"/>
+      <line num="12" count="4" type="cond" truecount="2" falsecount="0"/>
+      <line num="13" count="1" type="stmt"/>
+      <line num="15" count="6" type="stmt"/>
+      <line num="16" count="6" type="cond" truecount="2" falsecount="0"/>
+      <line num="20" count="1" type="stmt"/>
+    </file>
+    <file name="betterWithAge.js" path="/Users/jonas/Documents/Projects/week10/gilded_rose/src/betterWithAge.js">
+      <metrics statements="6" coveredstatements="6" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
+      <line num="1" count="1" type="stmt"/>
+      <line num="5" count="7" type="stmt"/>
+      <line num="6" count="7" type="stmt"/>
+      <line num="10" count="12" type="stmt"/>
+      <line num="11" count="12" type="cond" truecount="2" falsecount="0"/>
+      <line num="15" count="1" type="stmt"/>
+    </file>
+    <file name="conjuredItem.js" path="/Users/jonas/Documents/Projects/week10/gilded_rose/src/conjuredItem.js">
+      <metrics statements="7" coveredstatements="7" conditionals="4" coveredconditionals="4" methods="2" coveredmethods="2"/>
+      <line num="1" count="1" type="stmt"/>
+      <line num="5" count="3" type="stmt"/>
+      <line num="6" count="3" type="stmt"/>
+      <line num="10" count="4" type="cond" truecount="2" falsecount="0"/>
+      <line num="11" count="4" type="stmt"/>
+      <line num="12" count="4" type="cond" truecount="2" falsecount="0"/>
+      <line num="16" count="1" type="stmt"/>
+    </file>
+    <file name="item.js" path="/Users/jonas/Documents/Projects/week10/gilded_rose/src/item.js">
+      <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <line num="3" count="46" type="stmt"/>
+      <line num="4" count="46" type="stmt"/>
+      <line num="5" count="46" type="stmt"/>
+      <line num="9" count="1" type="stmt"/>
+    </file>
+    <file name="shop.js" path="/Users/jonas/Documents/Projects/week10/gilded_rose/src/shop.js">
+      <metrics statements="19" coveredstatements="19" conditionals="8" coveredconditionals="8" methods="5" coveredmethods="5"/>
+      <line num="1" count="1" type="stmt"/>
+      <line num="2" count="1" type="stmt"/>
       <line num="3" count="1" type="stmt"/>
       <line num="4" count="1" type="stmt"/>
       <line num="5" count="1" type="stmt"/>
-      <line num="11" count="1" type="stmt"/>
-      <line num="14" count="1" type="stmt"/>
-      <line num="15" count="1" type="cond" truecount="3" falsecount="1"/>
-      <line num="16" count="1" type="cond" truecount="1" falsecount="1"/>
-      <line num="17" count="0" type="cond" truecount="0" falsecount="2"/>
-      <line num="18" count="0" type="stmt"/>
-      <line num="22" count="0" type="cond" truecount="0" falsecount="2"/>
-      <line num="23" count="0" type="stmt"/>
-      <line num="24" count="0" type="cond" truecount="0" falsecount="2"/>
-      <line num="25" count="0" type="cond" truecount="0" falsecount="2"/>
-      <line num="26" count="0" type="cond" truecount="0" falsecount="2"/>
-      <line num="27" count="0" type="stmt"/>
-      <line num="30" count="0" type="cond" truecount="0" falsecount="2"/>
-      <line num="31" count="0" type="cond" truecount="0" falsecount="2"/>
-      <line num="32" count="0" type="stmt"/>
-      <line num="38" count="1" type="cond" truecount="1" falsecount="1"/>
-      <line num="39" count="1" type="stmt"/>
-      <line num="41" count="1" type="cond" truecount="1" falsecount="1"/>
-      <line num="42" count="1" type="cond" truecount="1" falsecount="1"/>
-      <line num="43" count="1" type="cond" truecount="1" falsecount="1"/>
-      <line num="44" count="1" type="cond" truecount="1" falsecount="1"/>
-      <line num="45" count="0" type="cond" truecount="0" falsecount="2"/>
-      <line num="46" count="0" type="stmt"/>
-      <line num="50" count="0" type="stmt"/>
-      <line num="53" count="0" type="cond" truecount="0" falsecount="2"/>
-      <line num="54" count="0" type="stmt"/>
-      <line num="60" count="1" type="stmt"/>
-      <line num="64" count="1" type="stmt"/>
+      <line num="9" count="19" type="stmt"/>
+      <line num="13" count="19" type="stmt"/>
+      <line num="14" count="23" type="cond" truecount="2" falsecount="0"/>
+      <line num="15" count="3" type="stmt"/>
+      <line num="16" count="20" type="cond" truecount="2" falsecount="0"/>
+      <line num="17" count="4" type="stmt"/>
+      <line num="18" count="16" type="cond" truecount="2" falsecount="0"/>
+      <line num="19" count="1" type="stmt"/>
+      <line num="20" count="15" type="cond" truecount="2" falsecount="0"/>
+      <line num="21" count="3" type="stmt"/>
+      <line num="23" count="12" type="stmt"/>
+      <line num="26" count="19" type="stmt"/>
+      <line num="30" count="41" type="stmt"/>
+      <line num="34" count="1" type="stmt"/>
+    </file>
+    <file name="stockItem.js" path="/Users/jonas/Documents/Projects/week10/gilded_rose/src/stockItem.js">
+      <metrics statements="10" coveredstatements="10" conditionals="4" coveredconditionals="4" methods="3" coveredmethods="3"/>
+      <line num="1" count="1" type="stmt"/>
+      <line num="5" count="23" type="stmt"/>
+      <line num="6" count="23" type="stmt"/>
+      <line num="7" count="23" type="stmt"/>
+      <line num="11" count="38" type="stmt"/>
+      <line num="12" count="38" type="stmt"/>
+      <line num="16" count="22" type="cond" truecount="2" falsecount="0"/>
+      <line num="17" count="22" type="stmt"/>
+      <line num="18" count="22" type="cond" truecount="2" falsecount="0"/>
+      <line num="22" count="1" type="stmt"/>
+    </file>
+    <file name="sulfuras.js" path="/Users/jonas/Documents/Projects/week10/gilded_rose/src/sulfuras.js">
+      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+      <line num="1" count="1" type="stmt"/>
+      <line num="5" count="1" type="stmt"/>
+      <line num="12" count="1" type="stmt"/>
     </file>
   </project>
 </coverage>
