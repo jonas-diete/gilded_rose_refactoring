@@ -33,7 +33,12 @@ Type `node run.js <number of days>` to see the items in the shop and how their q
 There is a shop class that can be passed a list of items. It then classes the items into the correct child classes, depending on their name.  
 Every day, the updateQuality function in the shop is called, which in turn calls the updateValues function for each item.
 
-I used class inheritance and polymorphism to write different classes for different items. 
+I used class inheritance and polymorphism to write different classes for different items. \
+
+For each child class of Item and StockItem I reused some functions or parts of them and overrode others.   
+By using inheritance it is easy to define a new class of items - just write a new class that inherits from StockItem and change the values or constraints that need to be different.
+
+I wrote the programm following Test Driven Development (TDD), always starting with a test and then writing code to implement that feature. Each test increased the complexity of the program incrementally.
 
 ## These are my Item Classes:
 
@@ -50,7 +55,3 @@ The following are children of StockItem:
 
 - BackstagePass - extends BetterWithAge - increases in value quicker the closer to the sellIn (the concert date) we get.
 
-For each child class of Item and StockItem I reused some functions or parts of them and overrode others.   
-By using inheritance it is easy to define a new class of items - just write a new class that inherits from StockItem and change the values or constraints that need to be different.
-
-I wrote the programm following Test Driven Development (TDD), always starting with a test and then writing code to implement that feature. Each test increased the complexity of the program incrementally.
