@@ -5,7 +5,7 @@ class Sulfuras extends StockItem {
     super(name, sellIn, quality);
   }
 
-  // overrides parent function, so qualityChangeRate is not set to -2 when sellIn is 0 or smaller
+  // overrides parent function, so the values don't change
   updateValues() {}
 }
 

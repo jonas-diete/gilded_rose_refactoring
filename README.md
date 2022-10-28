@@ -43,11 +43,12 @@ Unfortunately, the goblin in the corner wrote this and I am not allowed to chang
 It then defines the standard rate at which the item quality degrades and how sellIn gets reduced each day.   
 It has a method to update the values.
 
-The following are all children of StockItem:
+The following are children of StockItem:
 - BetterWithAge - handles items that increase in value (for example 'Aged Brie')
 - Sulfuras - a magical weapon whose values don't change.
-- BackstagePass - they increase in value quicker the closer to the sellIn (the concert date) we get.
 - ConjuredItem - they degrade at twice the speed of normal items
+
+- BackstagePass - extends BetterWithAge - increases in value quicker the closer to the sellIn (the concert date) we get.
 
 For each child class of Item and StockItem I reused some functions or parts of them and overrode others.   
 By using inheritance it is easy to define a new class of items - just write a new class that inherits from StockItem and change the values or constraints that need to be different.
