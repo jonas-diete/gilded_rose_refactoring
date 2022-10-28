@@ -10,7 +10,7 @@ High quality code to me means:
 
 The Gilded Rose is a shop with a item inventory system that updates the quality of each item and the number of days in which it has to be sold (sellIn) daily.
 
-Here is a  of the program in action.
+Here is a screenshot of the program in action.
 
 ![screenshot](./program_screenshot.png)
 
